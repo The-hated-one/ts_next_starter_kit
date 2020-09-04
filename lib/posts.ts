@@ -52,7 +52,7 @@ export function getAllPostIds(): { params: { id: string } }[] {
 }
 
 export async function getPostData(
-  id: string,
+  id: string
 ): Promise<{ id: string; contentHtml: string; date: string; title: string }> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');

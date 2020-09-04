@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "lint": "eslint components/ pages/ lib/ styles/ --ext ts,tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier:write": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json}",
+    "tsc": "tsc --noEmit",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix"
+    "start": "next start"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint:fix"
